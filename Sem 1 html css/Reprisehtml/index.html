@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemples de balises spécifiques</title>
+    <style>
+
+        /* style des sous-titres de la vidéo */
+        video::cue {
+            background-color: #272727;
+            color: hotpink;
+            padding: 10px;
+        }
+        /* style du mot <b>changing</b> dans le fichier des sous-titres */
+        video::cue(b) {
+            background-color: #272727;
+            color: #f2ff00;
+            font-size: 150%;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- ++++  <DFN>  <ABBR>   ++++ -->
+    
+    <!-- <dfn> précise un terme à définir (la définition du terme se place juste après le <dfn>) -->
+    <!-- <abbr> indique une abbérvation -->
+    <!-- l'attribut title pemet d'ajouter une info-bulle -->
+    <p>
+        <dfn>
+            <abbr title="Cascading Style Sheets">CSS</abbr>
+        </dfn> 
+
+    is a language that describes the style of an HTML document.</p>
+
+
+    <!-- ++++  <DETAILS>   ++++ -->
+
+    <!-- créer un widget déroulant -->
+    
+    <details>
+        <summary>Epcot Center</summary>
+        <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+      </details>
+
+
+    <!-- ++++  <ADDRESS>  ++++ -->
+
+    <!-- donner les coordonnées de l'auteur d'une page ou d'un article   -->
+    <address>
+        Written by <a href="mailto:webmaster@example.com">Jon Doe</a>.<br>
+        Visit us at:<br>
+        Example.com<br>
+        Box 564, Disneyland<br>
+        USA
+    </address>
+
+
+    <!-- ++++   <DIALOG>   ++++  -->
+
+
+    <dialog>        
+        <button id="closeModalBtn">X</button>
+        <p>This is an open dialog window</p>    
+    </dialog>
+
+    <button id="openModalBtn"> OPEN MODAL </button>
+
+
+    <!-- ++++ <METER>  ++++ -->
+
+
+    <p>The meter element is used to display a gauge:</p>
+
+    <label for="disk_c">Disk usage C:</label>
+    <meter id="disk_c" value="8" min="0" max="10">2 out of 10</meter><br>
+    
+    <label for="disk_d">Disk usage D:</label>
+    <meter id="disk_d" value="0.6">60%</meter>
+
+
+    <!-- ++++ <PROGRESS>  ++++ -->
+
+    <label for="file">Downloading progress:</label>
+    <progress id="file" value="60" max="100"> 32% </progress>
+
+    <br><br>
+
+    <!-- ++++ <TRACK>  ++++ -->
+
+    <video width="150" height="100" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <track src="subtitles.vtt"  kind="captions" default >
+    </video>
+
+
+
+    <!-- script pour ouvrir ou fermer la fenêtre modal avec les boutons -->
+    <script>
+
+        const dialog = document.querySelector('dialog');
+        const openModalButton = document.getElementById('openModalBtn');
+        const closeModalButton = document.getElementById('closeModalBtn');
+
+
+        openModalButton.addEventListener('click', () => {
+            dialog.showModal();
+        })
+
+        closeModalButton.addEventListener('click', () => {
+            dialog.close();
+        })
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Mes integrations</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">A propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="hotgot.jpg" alt="chienHotDog">
+    </header>
+    <main>
+        <article>
+            <h2>Article 1</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem accusantium aliquam tenetur aperiam! Excepturi porro voluptatem laborum voluptatibus cupiditate, consectetur velit minima ut molestias itaque assumenda est quam quod voluptatum quae eos soluta illum delectus! Iste cupiditate eos debitis ducimus?</p>
+            <details>
+                <summary>En savoir plus sur lorem en image</summary> 
+                <img src="Red.jpg" alt="Redrose"> 
+            </details>
+        </article>
+        <br><br><br>
+    </main>   
+    <footer>
+        <form action="">
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Nom" required>
+            </label>
+            <br><br>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </label>
+            <br><br>
+            <label for="password">
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$" 
+                title="Le mot de passe doit contenir au moins 8 caractères, une lettre majuscule, une lettre minuscule, un chiffre et un caractère spécial (!@#$%^&*).">
+            </label>
+            <br><br>
+            <label for="age">
+                <input type="number" name="age" id="age" placeholder="Age" required min="8" max="100">
+            </label>
+            <br><br>
+            <label for="tel">
+                <input type="tel" name="tel" id="tel" placeholder="Telephone" required>
+            </label>
+            <br><br>
+            <button type="submit">Finalisez votre inscription</button>
+        </form>
+    </footer>
+</body>
+</html>

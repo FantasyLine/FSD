@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de la souris</title>
+    <style>
+        .rectangle {
+            width: 400px;
+            height: 300px;
+            background-color: royalblue;
+            transition: background-color 0.5s ease;
+        }
+
+        .important {
+            background-color: firebrick;
+        }
+
+        .good{
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <p>Le rectangle change de couleur en rouge sur un over, et vert lorsqu'on double clic</p>
+    <p>Si on appuie sur le bouton le rectangle est cacher ou reviens</p>
+    <div class="rectangle"></div>
+    <button id="toggle-rectangle">Cliquez dessus</button>
+</body>
+<script src="index.js"></script>
+</html>
